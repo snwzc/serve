@@ -1,0 +1,34 @@
+{
+  "name": "sever",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=local nodemon ./main.js ",
+    "start:dev": "cross-env NODE_ENV=dev  nodemon ./main.js ",
+    "start:pro": "cross-env NODE_ENV=pro  nodemon ./main.js ",
+    "start-pm2:dev": "pm2 start  ecosystem.config.js --only car_net_admin_dev  ",
+    "start-pm2:pro": "pm2 start  ecosystem.config.js --only car_net_admin_pro  ",
+    "stop": " pm2 stop car_net_admin_pro car_net_admin_dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.12.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-compress": "^4.0.1",
+    "koa-router": "^9.0.1",
+    "koa-session": "^6.0.0",
+    "koa-static": "^5.0.0",
+    "log4js": "^6.3.0",
+    "md5.js": "^1.3.5",
+    "moment": "^2.26.0",
+    "nodemon": "^2.0.4",
+    "pg": "^8.2.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.12",
+    "svg-captcha": "^1.4.0"
+  }
+}
